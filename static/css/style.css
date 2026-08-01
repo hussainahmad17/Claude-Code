@@ -477,6 +477,58 @@ a { color: inherit; text-decoration: none; }
 
 .auth-switch a:hover { text-decoration: underline; }
 
+/* Login page (Figma design) */
+.auth-section-login {
+    background: var(--paper);
+    padding: 7rem 2rem;
+}
+
+.auth-card-login {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 45px;
+    padding: 3rem 2.5rem 2.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.auth-header-login {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.auth-title-login {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: #2b6cb0;
+    margin-bottom: 0.25rem;
+}
+
+.auth-subtitle-login {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #4c7a4c;
+}
+
+.auth-form-login { display: block; }
+
+.auth-form-login .form-group { margin-bottom: 1.25rem; }
+
+.forgot-password-link {
+    display: inline-block;
+    color: #2b6cb0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0.25rem 0 1rem;
+}
+
+.forgot-password-link:hover { text-decoration: underline; }
+
 /* ------------------------------------------------------------------ */
 /* Footer                                                              */
 /* ------------------------------------------------------------------ */

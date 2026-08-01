@@ -1,43 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %}Sign in — Spendly{% endblock %}
+{% block title %}Login — Spendly{% endblock %}
 
 {% block content %}
 
-<section class="auth-section">
-    <div class="auth-container">
+<section class="auth-section auth-section-login">
+    <div class="auth-card-login">
 
-        <div class="auth-header">
-            <h1 class="auth-title">Welcome back</h1>
-            <p class="auth-subtitle">Sign in to your Spendly account</p>
+        <div class="auth-header-login">
+            <h1 class="auth-title-login">Welcome Back!</h1>
+            <p class="auth-subtitle-login">Login to continue</p>
         </div>
 
-        <div class="auth-card">
-            {% if error %}
-            <div class="auth-error">{{ error }}</div>
-            {% endif %}
+        {% if error %}
+        <div class="auth-error">{{ error }}</div>
+        {% endif %}
 
-            <form method="POST" action="/login">
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" name="email"
-                           class="form-input" placeholder="nitish@example.com"
-                           required autofocus>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password"
-                           class="form-input" placeholder="Your password"
-                           required>
-                </div>
-                <button type="submit" class="btn-submit">Sign in</button>
-            </form>
-        </div>
-
-        <p class="auth-switch">
-            Don't have an account?
-            <a href="{{ url_for('register') }}">Create one free</a>
-        </p>
+        <form method="POST" action="/login" class="auth-form-login">
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="email" id="email" name="email"
+                       class="form-input" placeholder="Enter your username"
+                       required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       class="form-input" placeholder="Enter your password"
+                       required>
+            </div>
+            <a href="#" class="forgot-password-link">Forgot Password?</a>
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
 
     </div>
 </section>
